@@ -18,7 +18,7 @@ app.set('view engine', 'hbs')  // hbs templating engine
 app.set('views', viewsDirPath)
 hbs.registerPartials(partialsDirPath)
 
-const PORT = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
     res.render('index', {
